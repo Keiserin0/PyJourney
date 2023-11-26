@@ -1,0 +1,35 @@
+import random
+
+number = random.randint(1,10)
+attempts = 1
+print("="*20)
+print("""
+Guessing Game
+Can you guess the secret number?
+Select any number between 1 to 100.
+See how many tries it takes you to guess it.
+""")
+print("="*20)
+
+guess = int(input("Make a guess between 1 to 100: "))
+while guess != number:
+
+    if guess > number:
+        print("Your guess is too high")
+        guess = int(input("Make a guess between 1 to 100: "))
+        attempts += 1
+
+    elif guess < number:
+        print("You guess is too low")
+        guess = int(input("Make a guess between 1 to 100: "))
+        attempts += 1
+
+    else:
+        break
+
+print(f"Congrats, you guessed {number} correctly in {attempts} tries\nGoodbye")
+
+
+
+
+
